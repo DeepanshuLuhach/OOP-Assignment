@@ -13,7 +13,7 @@ public:
    friend Complex operator / (Complex,Complex);
    void display()
    {
-       cout<<real<<" + i"<<img<<endl;
+       cout<<"\t"<<real<<" + i"<<img<<endl;
    }
 
 
@@ -63,74 +63,74 @@ Complex operator * (Complex C1,Complex C2)
 }
 void memf()
 {
-    cout<<"Enter your choice :\n";
+    cout<<"\n\tEnter your choice :\n";
     int m;
-    cout<<"1.Addition\n2.Subtraction\n";
+    cout<<"\t1.Addition\n\t2.Subtraction\n\t";
     cin>>m;
     Complex a,b,c;
     int x,y;
     switch(m)
     {
-        case 1:cout<<"Enter the value for first complex number :";
+        case 1:cout<<"\n\tEnter the value for first complex number :";
                 cin>>x>>y;
                 a=Complex(x,y);
-                cout<<"Enter the value for second complex number :";
+                cout<<"\n\tEnter the value for second complex number :";
                 cin>>x>>y;
                 b=Complex(x,y);
                 c=a+b;
                 c.display();
                 break;
-        case 2: cout<<"Enter the value for first complex number :";
+        case 2: cout<<"\n\tEnter the value for first complex number :";
                 cin>>x>>y;
                 a=Complex(x,y);
-                cout<<"Enter the value for second complex number :";
+                cout<<"\n\tEnter the value for second complex number :";
                 cin>>x>>y;
                 b=Complex(x,y);
                 c=a-b;
                 c.display();
                 break;
-        default:"Invalid Choice!";
+        default:"\n\tInvalid Choice!";
     }
 }
 void friendf()
 {
-    cout<<"Enter your choice :\n";
+    cout<<"\n\tEnter your choice :\n";
     int m;
-    cout<<"1.Multiplication\n2.Division\n";
+    cout<<"\t1.Multiplication\n\t2.Division\n\t";
     cin>>m;
     Complex a,b,c;
     int x,y;
     switch(m)
     {
-        case 1:cout<<"Enter the value for first complex number :";
+        case 1:cout<<"\n\tEnter the value for first complex number :";
                 cin>>x>>y;
                 a=Complex(x,y);
-                cout<<"Enter the value for second complex number :";
+                cout<<"\n\tEnter the value for second complex number :";
                 cin>>x>>y;
                 b=Complex(x,y);
                 c=a*b;
                 c.display();
                 break;
-        case 2: cout<<"Enter the value for first complex number :";
+        case 2: cout<<"\n\tEnter the value for first complex number :";
                 cin>>x>>y;
                 a=Complex(x,y);
-                cout<<"Enter the value for second complex number :";
+                cout<<"\n\tEnter the value for second complex number :";
                 cin>>x>>y;
                 b=Complex(x,y);
                 c=a/b;
                 c.display();
                 break;
-        default:"Invalid Choice!";
+        default:"\n\tInvalid Choice!";
     }
 }
 
 int main()
 {
     int choice;
-    char ch;
+    int ch;
     do{
-        cout<<"Enter your choice:";
-        cout<<"\n1.Member Function\n2.Friend Function";
+        cout<<"\n\tEnter your choice:";
+        cout<<"\n\t1.Member Function\n\t2.Friend Function\n\t";
         cin>>choice;
         switch(choice)
         {
@@ -138,11 +138,11 @@ int main()
                     break;
             case 2: friendf();
                     break;
-            default:cout<<"invalid Choice:";
+            default:cout<<"\n\tinvalid Choice:";
         }
-        cout<<"\nDo you wish to continue(y/n)\n";
+        cout<<"\n\tDo you wish to continue(1/0):";
 
         cin>>ch;
-    }while(ch=='Y'||ch=='y');
+    }while(ch==1);
 }
 
